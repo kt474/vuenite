@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex mt-8 mx-16 justify-between">
+  <div class="flex mt-8 mx-8 justify-between">
     <div class="text-3xl flex font-semibold">
       <p class="text-primary">Vue</p>
       <p class="text-secondary">nite</p>
