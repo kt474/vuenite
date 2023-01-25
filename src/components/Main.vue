@@ -54,6 +54,7 @@ const chooseBackend = (value: string) => {
         >
         web app in seconds with your favorite framework, UI library, and backend
       </p>
+      <button class="btn btn-secondary mt-6">Get Started</button>
     </div>
     <div class="ml-8">
       <img class="max-w-lg" src="../assets/main_page_holder.svg" />
