@@ -1,33 +1,66 @@
 <script setup lang="ts">
-import { ref } from "vue";
-const darkMode = ref(false);
+import { ref, onMounted, watch, computed } from "vue";
+import { useStore } from "../store/store";
+
+const store = useStore();
+const systemDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+const checked = ref(systemDarkMode);
+
+const darkMode = computed(() => {
+  return store.darkMode;
+});
+
+onMounted(() => {
+  if (systemDarkMode && !localStorage.darkMode) {
+    checked.value = true;
+    store.updateDarkMode(true);
+  } else if (localStorage.darkMode) {
+    checked.value = JSON.parse(localStorage.darkMode);
+    store.updateDarkMode(checked.value);
+  }
+});
+
+watch(checked, () => {
+  localStorage.darkMode = checked.value;
+  store.updateDarkMode(checked.value);
+});
 </script>
 
 <template>
-  <div class="flex mt-8 mx-20 justify-between">
+  <div class="flex pt-8 mx-20 justify-between">
     <div class="text-3xl flex">
       <p class="text-primary font-bold hover:text-secondary">VUE</p>
       <p class="text-secondary font-bold hover:text-primary">NITE</p>
     </div>
     <div class="text-2xl flex">
-      <p class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4">
+      <p
+        class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4 dark:text-slate-200"
+      >
         Home
       </p>
-      <p class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4">
+      <p
+        class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4 dark:text-slate-200"
+      >
         About
       </p>
-      <p class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4">
+      <p
+        class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4 dark:text-slate-200"
+      >
         Docs
       </p>
-      <div class="divider divider-horizontal mx-0"></div>
+      <div
+        class="divider divider-horizontal mx-0 before:dark:bg-slate-200 after:dark:bg-slate-200"
+      ></div>
       <div class="flex w-16">
         <input
           type="checkbox"
           class="toggle toggle-sm mt-2 ml-2"
-          v-model="darkMode"
+          v-model="checked"
         />
         <svg
-          v-if="!darkMode"
+          v-if="!checked"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -47,7 +80,7 @@ const darkMode = ref(false);
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="currentColor"
+          :stroke="darkMode ? '#e2e8f0' : '#1e293b'"
           class="w-5 h-5 mt-2 ml-1"
         >
           <path

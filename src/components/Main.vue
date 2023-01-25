@@ -32,11 +32,13 @@ const chooseBackend = (value: string) => {
 </script>
 
 <template>
-  <div class="mt-28 mx-12 flex justify-around">
+  <div class="mt-24 mx-12 flex justify-around">
     <div class="w-2/5">
       <div class="mb-8">
-        <p class="font-bold text-5xl leading-tight">Customizable</p>
-        <p class="font-bold text-5xl leading-tight">
+        <p class="font-bold text-5xl leading-snug dark:text-slate-200">
+          Customizable
+        </p>
+        <p class="font-bold text-5xl leading-snug">
           <img src="../assets/vue.svg" class="inline mb-2" width="45px" />
           <a
             href="https://vuejs.org"
@@ -45,9 +47,11 @@ const chooseBackend = (value: string) => {
             >Vue.js</a
           >
         </p>
-        <p class="font-bold text-5xl leading-tight">codebase generator</p>
+        <p class="font-bold text-5xl leading-snug dark:text-slate-200">
+          codebase generator
+        </p>
       </div>
-      <p class="text-xl leading-8">
+      <p class="text-xl leading-8 dark:text-slate-200">
         Build a modern, preconfigured
         <span class="custom-vue font-semibold"
           ><a href="https://vuejs.org" target="_blank">Vue</a></span
@@ -61,10 +65,10 @@ const chooseBackend = (value: string) => {
     </div>
   </div>
   <div class="mx-24 mt-20">
-    <p class="text-3xl my-8">Generate a codebase</p>
+    <p class="text-3xl my-8 dark:text-slate-200">Generate a codebase</p>
     <div class="flex justify-between">
       <div class="flex mb-4">
-        <p class="text-xl m-1">Website Type:</p>
+        <p class="text-xl m-1 dark:text-slate-200">Website Type:</p>
         <div class="dropdown w-40">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ websiteType }}
@@ -97,7 +101,7 @@ const chooseBackend = (value: string) => {
         </div>
       </div>
       <div class="flex mb-4">
-        <p class="text-xl m-1">Framework:</p>
+        <p class="text-xl m-1 dark:text-slate-200">Framework:</p>
         <div class="dropdown w-28">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ framework }}
@@ -128,7 +132,7 @@ const chooseBackend = (value: string) => {
         </div>
       </div>
       <div class="flex mb-4">
-        <p class="text-xl m-1">UI Library:</p>
+        <p class="text-xl m-1 dark:text-slate-200">UI Library:</p>
         <div class="dropdown w-36">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ uiLibrary }}
@@ -162,7 +166,7 @@ const chooseBackend = (value: string) => {
         </div>
       </div>
       <div class="flex mb-4">
-        <p class="text-xl m-1">Database/CMS:</p>
+        <p class="text-xl m-1 dark:text-slate-200">Database/CMS:</p>
         <div class="dropdown w-36">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ backend }}
@@ -196,7 +200,9 @@ const chooseBackend = (value: string) => {
       </div>
     </div>
     <div class="mockup-window border border-base-300 mt-8 h-1/2">
-      <div class="flex justify-center px-4 py-32 border-t border-base-300">
+      <div
+        class="flex justify-center px-4 py-32 border-t border-base-300 dark:text-slate-200"
+      >
         {{ websiteType }}
         {{ framework }}
         {{ uiLibrary }}
