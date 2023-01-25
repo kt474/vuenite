@@ -32,13 +32,15 @@ const chooseBackend = (value: string) => {
 </script>
 
 <template>
-  <div class="mt-24 mx-12 flex justify-around">
-    <div class="w-2/5">
+  <div class="mt-24 mx-8 lg:mx-20 flex flex-wrap justify-between">
+    <div class="max-w-lg">
       <div class="mb-8">
-        <p class="font-bold text-5xl leading-snug dark:text-slate-200">
+        <p
+          class="font-bold dark:text-slate-200 text-3xl lg:text-5xl lg:leading-snug"
+        >
           Customizable
         </p>
-        <p class="font-bold text-5xl leading-snug">
+        <p class="font-bold text-3xl lg:text-5xl lg:leading-snug">
           <img src="../assets/vue.svg" class="inline mb-2" width="45px" />
           <a
             href="https://vuejs.org"
@@ -47,12 +49,14 @@ const chooseBackend = (value: string) => {
             >Vue.js</a
           >
         </p>
-        <p class="font-bold text-5xl leading-snug dark:text-slate-200">
+        <p
+          class="font-bold text-3xl lg:text-5xl lg:leading-snug dark:text-slate-200"
+        >
           codebase generator
         </p>
       </div>
-      <p class="text-xl leading-8 dark:text-slate-200">
-        Build a modern, preconfigured
+      <p class="text-lg lg:text-xl lg:leading-8 dark:text-slate-200 w-4/5">
+        Build a modern, responsive,
         <span class="custom-vue font-semibold"
           ><a href="https://vuejs.org" target="_blank">Vue</a></span
         >
@@ -60,13 +64,15 @@ const chooseBackend = (value: string) => {
       </p>
       <button class="btn btn-secondary mt-6">Get Started</button>
     </div>
-    <div class="ml-8">
-      <img class="max-w-lg" src="../assets/main_page_holder.svg" />
+    <div class="xl:ml-4 max-w-xs xl:max-w-md p-4">
+      <img src="../assets/main_page_holder.svg" />
     </div>
   </div>
-  <div class="mx-24 mt-20">
-    <p class="text-3xl my-8 dark:text-slate-200">Generate a codebase</p>
-    <div class="flex justify-between">
+  <div class="mx-8 lg:mx-20 mt-20">
+    <p class="text-2xl lg:text-3xl my-8 dark:text-slate-200">
+      Generate a codebase
+    </p>
+    <div class="flex flex-wrap justify-between">
       <div class="flex mb-4">
         <p class="text-xl m-1 dark:text-slate-200">Website Type:</p>
         <div class="dropdown w-40">

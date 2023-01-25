@@ -29,12 +29,12 @@ watch(checked, () => {
 </script>
 
 <template>
-  <div class="flex pt-8 mx-20 justify-between">
+  <div class="flex pt-8 mx-8 lg:mx-20 justify-between">
     <div class="text-3xl flex">
       <p class="text-primary font-bold hover:text-secondary">VUE</p>
       <p class="text-secondary font-bold hover:text-primary">NITE</p>
     </div>
-    <div class="text-2xl flex">
+    <div class="text-sm flex sm:text-2xl">
       <p
         class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4 dark:text-slate-200"
       >
