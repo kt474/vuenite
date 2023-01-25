@@ -32,7 +32,7 @@ const chooseBackend = (value: string) => {
 </script>
 
 <template>
-  <div class="mt-32 mx-12 flex justify-around">
+  <div class="mt-28 mx-12 flex justify-around">
     <div class="w-2/5">
       <div class="mb-8">
         <p class="font-bold text-5xl leading-tight">Customizable</p>
