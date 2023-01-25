@@ -33,13 +33,26 @@ const chooseBackend = (value: string) => {
 
 <template>
   <div class="mt-32 mx-12 flex justify-around">
-    <div class="w-1/3">
-      <p class="font-bold text-5xl mb-12 leading-tight">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      <p class="text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam est
-        reiciendis nihil illo. Commodi, mollitia neque!
+    <div class="w-2/5">
+      <div class="mb-8">
+        <p class="font-bold text-5xl leading-tight">Customizable</p>
+        <p class="font-bold text-5xl leading-tight">
+          <img src="../assets/vue.svg" class="inline mb-2" width="45px" />
+          <a
+            href="https://vuejs.org"
+            target="_blank"
+            class="custom-color ml-4 cursor-pointer"
+            >Vue.js</a
+          >
+        </p>
+        <p class="font-bold text-5xl leading-tight">codebase generator</p>
+      </div>
+      <p class="text-xl leading-8">
+        Build a modern, preconfigured
+        <span class="custom-vue font-semibold"
+          ><a href="https://vuejs.org" target="_blank">Vue</a></span
+        >
+        web app in seconds with your favorite framework, UI library, and backend
       </p>
     </div>
     <div class="ml-8">
@@ -51,7 +64,7 @@ const chooseBackend = (value: string) => {
     <div class="flex justify-between">
       <div class="flex mb-4">
         <p class="text-xl m-1">Website Type:</p>
-        <div class="dropdown">
+        <div class="dropdown w-40">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ websiteType }}
             <svg
@@ -84,7 +97,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1">Framework:</p>
-        <div class="dropdown">
+        <div class="dropdown w-28">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ framework }}
             <svg
@@ -115,7 +128,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1">UI Library:</p>
-        <div class="dropdown">
+        <div class="dropdown w-36">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ uiLibrary }}
             <svg
@@ -149,7 +162,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1">Database/CMS:</p>
-        <div class="dropdown">
+        <div class="dropdown w-36">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ backend }}
             <svg
@@ -177,17 +190,29 @@ const chooseBackend = (value: string) => {
             <li><a @click="chooseBackend('Firestore')">Firestore</a></li>
             <li><a @click="chooseBackend('Supabase')">Supabase</a></li>
             <li><a @click="chooseBackend('Strapi')">Strapi</a></li>
-            <li><a @click="chooseBackend('Contentful')">Contentful</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mockup-window border border-base-300 mt-8">
-      <div class="flex justify-center px-4 py-16 border-t border-base-300">
-        Hello!
+    <div class="mockup-window border border-base-300 mt-8 h-1/2">
+      <div class="flex justify-center px-4 py-32 border-t border-base-300">
+        {{ websiteType }}
+        {{ framework }}
+        {{ uiLibrary }}
+        {{ backend }}
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.custom-color {
+  color: #42b883;
+  border-bottom: 5px solid #35495e;
+}
+
+.custom-vue {
+  color: #42b883;
+  border-bottom: 3px solid #35495e;
+}
+</style>
