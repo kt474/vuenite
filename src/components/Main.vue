@@ -32,7 +32,7 @@ const chooseBackend = (value: string) => {
 </script>
 
 <template>
-  <div class="mt-24 mx-8 lg:mx-20 2xl:mx-36 flex flex-wrap justify-between">
+  <div class="mt-20 mx-8 lg:mx-20 2xl:mx-36 flex flex-wrap justify-between">
     <div class="max-w-md xl:max-w-lg">
       <div class="mb-8">
         <p
@@ -75,7 +75,7 @@ const chooseBackend = (value: string) => {
     <div class="flex flex-wrap justify-between">
       <div class="flex mb-4">
         <p class="text-xl m-1 dark:text-slate-200">Website Type:</p>
-        <div class="dropdown w-40">
+        <div class="dropdown w-40 ml-2">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ websiteType }}
             <svg
@@ -108,7 +108,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1 dark:text-slate-200">Framework:</p>
-        <div class="dropdown w-28">
+        <div class="dropdown w-28 ml-2">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ framework }}
             <svg
@@ -139,7 +139,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1 dark:text-slate-200">UI Library:</p>
-        <div class="dropdown w-36">
+        <div class="dropdown w-36 ml-2">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ uiLibrary }}
             <svg
@@ -173,7 +173,7 @@ const chooseBackend = (value: string) => {
       </div>
       <div class="flex mb-4">
         <p class="text-xl m-1 dark:text-slate-200">Database/CMS:</p>
-        <div class="dropdown w-36">
+        <div class="dropdown w-36 ml-2">
           <label tabindex="0" class="btn btn-sm btn-primary mt-1"
             >{{ backend }}
             <svg
