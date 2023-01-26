@@ -29,12 +29,41 @@ watch(checked, () => {
 </script>
 
 <template>
-  <div class="flex pt-8 mx-8 lg:mx-20 justify-between">
+  <div class="flex pt-8 mx-8 lg:mx-20 2xl:mx-36 justify-between">
     <div class="text-3xl flex">
       <p class="text-primary font-bold hover:text-secondary">VUE</p>
       <p class="text-secondary font-bold hover:text-primary">NITE</p>
     </div>
-    <div class="text-sm flex sm:text-2xl">
+    <div class="dropdown dropdown-end block sm:hidden">
+      <div class="dropdown w-10">
+        <label tabindex="0" class="btn btn-sm btn-primary mt-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            :stroke="darkMode ? '#e2e8f0' : '#1e293b'"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </label>
+
+        <ul
+          tabindex="0"
+          class="dropdown-content menu shadow bg-base-200 rounded-box"
+        >
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Docs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden sm:flex sm:text-2xl">
       <p
         class="mx-4 cursor-pointer hover:border-b-secondary hover:border-b-4 dark:text-slate-200"
       >
