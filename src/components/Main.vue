@@ -33,14 +33,14 @@ const chooseBackend = (value: string) => {
 
 <template>
   <div class="mt-24 mx-8 lg:mx-20 flex flex-wrap justify-between">
-    <div class="max-w-lg">
+    <div class="max-w-md xl:max-w-lg">
       <div class="mb-8">
         <p
-          class="font-bold dark:text-slate-200 text-3xl lg:text-5xl lg:leading-snug"
+          class="font-bold dark:text-slate-200 text-3xl lg:text-4xl xl:text-5xl xl:leading-snug mb-2 xl:mb-0"
         >
           Customizable
         </p>
-        <p class="font-bold text-3xl lg:text-5xl lg:leading-snug">
+        <p class="font-bold text-3xl lg:text-4xl xl:text-5xl xl:leading-snug">
           <img src="../assets/vue.svg" class="inline mb-2" width="45px" />
           <a
             href="https://vuejs.org"
@@ -50,7 +50,7 @@ const chooseBackend = (value: string) => {
           >
         </p>
         <p
-          class="font-bold text-3xl lg:text-5xl lg:leading-snug dark:text-slate-200"
+          class="font-bold text-3xl lg:text-4xl xl:text-5xl xl:leading-snug dark:text-slate-200 mt-1"
         >
           codebase generator
         </p>
@@ -64,7 +64,7 @@ const chooseBackend = (value: string) => {
       </p>
       <button class="btn btn-secondary mt-6">Get Started</button>
     </div>
-    <div class="xl:ml-4 max-w-xs xl:max-w-md p-4">
+    <div class="xl:ml-4 max-w-sm xl:max-w-md lg:p-4 mt-4 lg:mt-0">
       <img src="../assets/main_page_holder.svg" />
     </div>
   </div>
