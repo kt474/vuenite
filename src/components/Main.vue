@@ -32,7 +32,9 @@ const chooseBackend = (value: string) => {
 </script>
 
 <template>
-  <div class="mt-20 mx-8 lg:mx-20 2xl:mx-36 flex flex-wrap justify-between">
+  <div
+    class="mt-10 lg:mt-20 mx-8 lg:mx-20 2xl:mx-36 flex flex-wrap justify-between"
+  >
     <div class="max-w-md xl:max-w-lg">
       <div class="mb-8">
         <p
@@ -62,7 +64,7 @@ const chooseBackend = (value: string) => {
         >
         web app in seconds with your favorite framework, UI library, and backend
       </p>
-      <button class="btn btn-secondary mt-8">Get Started</button>
+      <button class="btn btn-secondary mt-8 mb-4 lg:mb-0">Get Started</button>
     </div>
     <div class="xl:ml-4 max-w-sm xl:max-w-md lg:p-4 mt-4 lg:mt-0">
       <img src="../assets/main_page_holder.svg" />
