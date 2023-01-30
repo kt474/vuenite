@@ -66,11 +66,11 @@ const chooseBackend = (value: string) => {
       </p>
       <button class="btn btn-secondary mt-8 mb-4 lg:mb-0">Get Started</button>
     </div>
-    <div class="xl:ml-4 max-w-sm xl:max-w-md lg:p-4 mt-4 lg:mt-0">
+    <div class="xl:ml-4 max-w-sm xl:max-w-md lg:p-4 mt-5 lg:mt-0">
       <img src="../assets/main_page_holder.svg" />
     </div>
   </div>
-  <div class="mx-8 lg:mx-20 2xl:mx-36 mt-20">
+  <div class="mx-8 lg:mx-20 2xl:mx-36 mt-10 lg:mt-20">
     <p class="text-2xl lg:text-3xl my-8 dark:text-slate-200">
       Generate a codebase
     </p>

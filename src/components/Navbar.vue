@@ -80,7 +80,7 @@ watch(checked, () => {
         Docs
       </p>
       <div
-        class="divider divider-horizontal mx-0 before:dark:bg-slate-200 after:dark:bg-slate-200"
+        class="divider divider-horizontal -ml-1 mr-0 before:dark:bg-slate-200 after:dark:bg-slate-200"
       ></div>
       <div class="flex w-16">
         <input
